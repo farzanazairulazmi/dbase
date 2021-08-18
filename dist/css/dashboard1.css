@@ -1,0 +1,475 @@
+/* Datatables */
+
+/* .form-control, .dataTables_wrapper .dataTables_length select, .dataTables_wrapper .dataTables_filter input {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 40, 100, 0.12);
+  border-radius: 3px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control, .dataTables_wrapper .dataTables_length select, .dataTables_wrapper .dataTables_filter input {
+    transition: none;
+  }
+}
+
+.form-control::-ms-expand, .dataTables_wrapper .dataTables_length select::-ms-expand, .dataTables_wrapper .dataTables_filter input::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control:focus, .dataTables_wrapper .dataTables_length select:focus, .dataTables_wrapper .dataTables_filter input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #1991eb;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25);
+}
+
+.form-control::-webkit-input-placeholder, .dataTables_wrapper .dataTables_length select::-webkit-input-placeholder, .dataTables_wrapper .dataTables_filter input::-webkit-input-placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder, .dataTables_wrapper .dataTables_length select::-moz-placeholder, .dataTables_wrapper .dataTables_filter input::-moz-placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder, .dataTables_wrapper .dataTables_length select::-ms-input-placeholder, .dataTables_wrapper .dataTables_filter input::-ms-input-placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.form-control::placeholder, .dataTables_wrapper .dataTables_length select::placeholder, .dataTables_wrapper .dataTables_filter input::placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+
+.form-control:disabled, .dataTables_wrapper .dataTables_length select:disabled, .dataTables_wrapper .dataTables_filter input:disabled, .form-control[readonly], .dataTables_wrapper .dataTables_length select[readonly], .dataTables_wrapper .dataTables_filter input[readonly] {
+  background-color: #f8f9fa;
+  opacity: 1;
+}
+
+select.form-control:focus::-ms-value, .dataTables_wrapper .dataTables_length select:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+
+select.form-control[size], .dataTables_wrapper .dataTables_length select[size], select.form-control[multiple], .dataTables_wrapper .dataTables_length select[multiple] {
+  height: auto;
+}
+
+.was-validated .form-control:valid, .was-validated .dataTables_wrapper .dataTables_length select:valid, .dataTables_wrapper .dataTables_length .was-validated select:valid, .was-validated .dataTables_wrapper .dataTables_filter input:valid, .dataTables_wrapper .dataTables_filter .was-validated input:valid, .form-control.is-valid, .dataTables_wrapper .dataTables_length select.is-valid, .dataTables_wrapper .dataTables_filter input.is-valid {
+  border-color: #5eba00;
+  padding-right: calc(1.6em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235eba00' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.4em + 0.1875rem);
+  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+}
+
+.was-validated .form-control:valid:focus, .was-validated .dataTables_wrapper .dataTables_length select:valid:focus, .dataTables_wrapper .dataTables_length .was-validated select:valid:focus, .was-validated .dataTables_wrapper .dataTables_filter input:valid:focus, .dataTables_wrapper .dataTables_filter .was-validated input:valid:focus, .form-control.is-valid:focus, .dataTables_wrapper .dataTables_length select.is-valid:focus, .dataTables_wrapper .dataTables_filter input.is-valid:focus {
+  border-color: #5eba00;
+  box-shadow: 0 0 0 2px rgba(94, 186, 0, 0.25);
+}
+
+.was-validated .form-control:valid ~ .valid-feedback, .was-validated .dataTables_wrapper .dataTables_length select:valid ~ .valid-feedback, .dataTables_wrapper .dataTables_length .was-validated select:valid ~ .valid-feedback, .was-validated .dataTables_wrapper .dataTables_filter input:valid ~ .valid-feedback, .dataTables_wrapper .dataTables_filter .was-validated input:valid ~ .valid-feedback,
+.was-validated .form-control:valid ~ .valid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_length select:valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_length .was-validated select:valid ~ .valid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_filter input:valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_filter .was-validated input:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .dataTables_wrapper .dataTables_length select.is-valid ~ .valid-feedback, .dataTables_wrapper .dataTables_filter input.is-valid ~ .valid-feedback,
+.form-control.is-valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_length select.is-valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_filter input.is-valid ~ .valid-tooltip {
+  display: block;
+}
+
+.was-validated .custom-select:valid, .was-validated .dataTables_wrapper .dataTables_length select:valid, .dataTables_wrapper .dataTables_length .was-validated select:valid, .custom-select.is-valid, .dataTables_wrapper .dataTables_length select.is-valid {
+  border-color: #5eba00;
+  padding-right: calc((1em + 1rem) * 3 / 4 + 1.75rem);
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235eba00' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+}
+
+.was-validated .custom-select:valid:focus, .was-validated .dataTables_wrapper .dataTables_length select:valid:focus, .dataTables_wrapper .dataTables_length .was-validated select:valid:focus, .custom-select.is-valid:focus, .dataTables_wrapper .dataTables_length select.is-valid:focus {
+  border-color: #5eba00;
+  box-shadow: 0 0 0 2px rgba(94, 186, 0, 0.25);
+}
+
+.was-validated .custom-select:valid ~ .valid-feedback, .was-validated .dataTables_wrapper .dataTables_length select:valid ~ .valid-feedback, .dataTables_wrapper .dataTables_length .was-validated select:valid ~ .valid-feedback,
+.was-validated .custom-select:valid ~ .valid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_length select:valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_length .was-validated select:valid ~ .valid-tooltip, .custom-select.is-valid ~ .valid-feedback, .dataTables_wrapper .dataTables_length select.is-valid ~ .valid-feedback,
+.custom-select.is-valid ~ .valid-tooltip,
+.dataTables_wrapper .dataTables_length select.is-valid ~ .valid-tooltip {
+  display: block;
+}
+
+.was-validated .form-control:invalid, .was-validated .dataTables_wrapper .dataTables_length select:invalid, .dataTables_wrapper .dataTables_length .was-validated select:invalid, .was-validated .dataTables_wrapper .dataTables_filter input:invalid, .dataTables_wrapper .dataTables_filter .was-validated input:invalid, .form-control.is-invalid, .dataTables_wrapper .dataTables_length select.is-invalid, .dataTables_wrapper .dataTables_filter input.is-invalid {
+  border-color: #cd201f;
+  padding-right: calc(1.6em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cd201f' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23cd201f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.4em + 0.1875rem);
+  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+}
+
+.was-validated .form-control:invalid:focus, .was-validated .dataTables_wrapper .dataTables_length select:invalid:focus, .dataTables_wrapper .dataTables_length .was-validated select:invalid:focus, .was-validated .dataTables_wrapper .dataTables_filter input:invalid:focus, .dataTables_wrapper .dataTables_filter .was-validated input:invalid:focus, .form-control.is-invalid:focus, .dataTables_wrapper .dataTables_length select.is-invalid:focus, .dataTables_wrapper .dataTables_filter input.is-invalid:focus {
+  border-color: #cd201f;
+  box-shadow: 0 0 0 2px rgba(205, 32, 31, 0.25);
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .dataTables_wrapper .dataTables_length select:invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_length .was-validated select:invalid ~ .invalid-feedback, .was-validated .dataTables_wrapper .dataTables_filter input:invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_filter .was-validated input:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_length select:invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_length .was-validated select:invalid ~ .invalid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_filter input:invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_filter .was-validated input:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_length select.is-invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_filter input.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_length select.is-invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_filter input.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+.was-validated .custom-select:invalid, .was-validated .dataTables_wrapper .dataTables_length select:invalid, .dataTables_wrapper .dataTables_length .was-validated select:invalid, .custom-select.is-invalid, .dataTables_wrapper .dataTables_length select.is-invalid {
+  border-color: #cd201f;
+  padding-right: calc((1em + 1rem) * 3 / 4 + 1.75rem);
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cd201f' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23cd201f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+}
+
+.was-validated .custom-select:invalid:focus, .was-validated .dataTables_wrapper .dataTables_length select:invalid:focus, .dataTables_wrapper .dataTables_length .was-validated select:invalid:focus, .custom-select.is-invalid:focus, .dataTables_wrapper .dataTables_length select.is-invalid:focus {
+  border-color: #cd201f;
+  box-shadow: 0 0 0 2px rgba(205, 32, 31, 0.25);
+}
+
+.was-validated .custom-select:invalid ~ .invalid-feedback, .was-validated .dataTables_wrapper .dataTables_length select:invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_length .was-validated select:invalid ~ .invalid-feedback,
+.was-validated .custom-select:invalid ~ .invalid-tooltip,
+.was-validated .dataTables_wrapper .dataTables_length select:invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_length .was-validated select:invalid ~ .invalid-tooltip, .custom-select.is-invalid ~ .invalid-feedback, .dataTables_wrapper .dataTables_length select.is-invalid ~ .invalid-feedback,
+.custom-select.is-invalid ~ .invalid-tooltip,
+.dataTables_wrapper .dataTables_length select.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+
+@media (min-width: 576px) {
+  .form-inline label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .form-inline .form-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .form-inline .form-control, .form-inline .dataTables_wrapper .dataTables_length select, .dataTables_wrapper .dataTables_length .form-inline select, .form-inline .dataTables_wrapper .dataTables_filter input, .dataTables_wrapper .dataTables_filter .form-inline input {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-inline .form-control-plaintext {
+    display: inline-block;
+  }
+  .form-inline .input-group,
+  .form-inline .custom-select,
+  .form-inline .dataTables_wrapper .dataTables_length select,
+  .dataTables_wrapper .dataTables_length .form-inline select {
+    width: auto;
+  }
+  .form-inline .form-check {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: auto;
+    padding-left: 0;
+  }
+  .form-inline .form-check-input {
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-right: 0.25rem;
+    margin-left: 0;
+  }
+  .form-inline .custom-control {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .form-inline .custom-control-label {
+    margin-bottom: 0;
+  }
+}
+
+.input-group > .form-control, .dataTables_wrapper .dataTables_length .input-group > select, .dataTables_wrapper .dataTables_filter .input-group > input,
+.input-group > .form-control-plaintext,
+.input-group > .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > select,
+.input-group > .custom-file {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+
+.input-group > .form-control + .form-control, .dataTables_wrapper .dataTables_length .input-group > select + .form-control, .dataTables_wrapper .dataTables_filter .input-group > input + .form-control, .dataTables_wrapper .dataTables_length .input-group > .form-control + select, .dataTables_wrapper .dataTables_length .input-group > select + select, .dataTables_wrapper .dataTables_filter .dataTables_length .input-group > input + select, .dataTables_wrapper .dataTables_length .dataTables_filter .input-group > input + select, .dataTables_wrapper .dataTables_filter .input-group > .form-control + input, .dataTables_wrapper .dataTables_length .dataTables_filter .input-group > select + input, .dataTables_wrapper .dataTables_filter .dataTables_length .input-group > select + input, .dataTables_wrapper .dataTables_filter .input-group > input + input,
+.input-group > .form-control + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > select + .custom-select,
+.dataTables_wrapper .dataTables_filter .input-group > input + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > .form-control + select,
+.dataTables_wrapper .dataTables_length .input-group > select + select,
+.dataTables_wrapper .dataTables_filter .dataTables_length .input-group > input + select,
+.dataTables_wrapper .dataTables_length .dataTables_filter .input-group > input + select,
+.input-group > .form-control + .custom-file,
+.dataTables_wrapper .dataTables_length .input-group > select + .custom-file,
+.dataTables_wrapper .dataTables_filter .input-group > input + .custom-file,
+.input-group > .form-control-plaintext + .form-control,
+.dataTables_wrapper .dataTables_length .input-group > .form-control-plaintext + select,
+.dataTables_wrapper .dataTables_filter .input-group > .form-control-plaintext + input,
+.input-group > .form-control-plaintext + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > .form-control-plaintext + select,
+.input-group > .form-control-plaintext + .custom-file,
+.input-group > .custom-select + .form-control,
+.dataTables_wrapper .dataTables_length .input-group > select + .form-control,
+.dataTables_wrapper .dataTables_length .input-group > .custom-select + select,
+.dataTables_wrapper .dataTables_length .input-group > select + select,
+.dataTables_wrapper .dataTables_filter .input-group > .custom-select + input,
+.dataTables_wrapper .dataTables_length .dataTables_filter .input-group > select + input,
+.dataTables_wrapper .dataTables_filter .dataTables_length .input-group > select + input,
+.input-group > .custom-select + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > select + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > .custom-select + select,
+.dataTables_wrapper .dataTables_length .input-group > select + select,
+.input-group > .custom-select + .custom-file,
+.dataTables_wrapper .dataTables_length .input-group > select + .custom-file,
+.input-group > .custom-file + .form-control,
+.dataTables_wrapper .dataTables_length .input-group > .custom-file + select,
+.dataTables_wrapper .dataTables_filter .input-group > .custom-file + input,
+.input-group > .custom-file + .custom-select,
+.dataTables_wrapper .dataTables_length .input-group > .custom-file + select,
+.input-group > .custom-file + .custom-file {
+  margin-left: -1px;
+}
+
+.input-group > .form-control:focus, .dataTables_wrapper .dataTables_length .input-group > select:focus, .dataTables_wrapper .dataTables_filter .input-group > input:focus,
+.input-group > .custom-select:focus,
+.dataTables_wrapper .dataTables_length .input-group > select:focus,
+.input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+  z-index: 3;
+}
+
+.input-group > .custom-file .custom-file-input:focus {
+  z-index: 4;
+}
+
+.input-group > .form-control:not(:last-child), .dataTables_wrapper .dataTables_length .input-group > select:not(:last-child), .dataTables_wrapper .dataTables_filter .input-group > input:not(:last-child),
+.input-group > .custom-select:not(:last-child),
+.dataTables_wrapper .dataTables_length .input-group > select:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .form-control:not(:first-child), .dataTables_wrapper .dataTables_length .input-group > select:not(:first-child), .dataTables_wrapper .dataTables_filter .input-group > input:not(:first-child),
+.input-group > .custom-select:not(:first-child),
+.dataTables_wrapper .dataTables_length .input-group > select:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group-lg > .form-control:not(textarea), .dataTables_wrapper .dataTables_length .input-group-lg > select:not(textarea), .dataTables_wrapper .dataTables_filter .input-group-lg > input:not(textarea),
+.input-group-lg > .custom-select,
+.dataTables_wrapper .dataTables_length .input-group-lg > select {
+  height: calc(1.44444444em + 1rem + 2px);
+}
+
+
+.input-group-sm > .form-control:not(textarea), .dataTables_wrapper .dataTables_length .input-group-sm > select:not(textarea), .dataTables_wrapper .dataTables_filter .input-group-sm > input:not(textarea),
+.input-group-sm > .custom-select,
+.dataTables_wrapper .dataTables_length .input-group-sm > select {
+  height: calc(1.14285714em + 0.5rem + 2px);
+}
+
+.input-group-lg > .custom-select,
+.dataTables_wrapper .dataTables_length .input-group-lg > select,
+.input-group-sm > .custom-select,
+.dataTables_wrapper .dataTables_length .input-group-sm > select {
+  padding-right: 1.75rem;
+}
+
+/* .custom-select, .dataTables_wrapper .dataTables_length select {
+  display: inline-block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.5rem 1.75rem 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  vertical-align: middle;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 40, 100, 0.12);
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+} */
+
+.custom-select:focus, .dataTables_wrapper .dataTables_length select:focus {
+  border-color: #1991eb;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25);
+}
+
+.custom-select:focus::-ms-value, .dataTables_wrapper .dataTables_length select:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+
+.custom-select[multiple], .dataTables_wrapper .dataTables_length select[multiple], .custom-select[size]:not([size="1"]), .dataTables_wrapper .dataTables_length select[size]:not([size="1"]) {
+  height: auto;
+  padding-right: 0.75rem;
+  background-image: none;
+}
+
+.custom-select:disabled, .dataTables_wrapper .dataTables_length select:disabled {
+  color: #868e96;
+  background-color: #e9ecef;
+}
+
+.custom-select::-ms-expand, .dataTables_wrapper .dataTables_length select::-ms-expand {
+  display: none;
+}
+
+.custom-control-label::before,
+.custom-file-label, .custom-select, .dataTables_wrapper .dataTables_length select {
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-control-label::before,
+  .custom-file-label, .custom-select, .dataTables_wrapper .dataTables_length select {
+    transition: none;
+  }
+}
+
+.input-icon .form-control:not(:last-child), .input-icon .dataTables_wrapper .dataTables_length select:not(:last-child), .dataTables_wrapper .dataTables_length .input-icon select:not(:last-child), .input-icon .dataTables_wrapper .dataTables_filter input:not(:last-child), .dataTables_wrapper .dataTables_filter .input-icon input:not(:last-child) {
+  padding-right: 2.5rem;
+}
+
+.input-icon .form-control:not(:first-child), .input-icon .dataTables_wrapper .dataTables_length select:not(:first-child), .dataTables_wrapper .dataTables_length .input-icon select:not(:first-child), .input-icon .dataTables_wrapper .dataTables_filter input:not(:first-child), .dataTables_wrapper .dataTables_filter .input-icon input:not(:first-child) {
+  padding-left: 2.5rem;
+}
+
+/* .dataTables_wrapper thead .sorting {
+  position: relative;
+}
+
+.dataTables_wrapper thead .sorting:after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  /* content: "\e92d"; */
+  /* font-family: 'feather' !important; 
+}
+
+.dataTables_wrapper thead .sorting:before {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  content: "\e930";
+  font-family: 'feather' !important;
+}
+
+.dataTables_wrapper thead .sorting_desc {
+  position: relative;
+}
+
+.dataTables_wrapper thead .sorting_desc:after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  content: "\e92d";
+  font-family: 'feather' !important;
+}
+
+.dataTables_wrapper thead .sorting_asc {
+  position: relative;
+}
+
+.dataTables_wrapper thead .sorting_asc:after {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  content: "\e930";
+  font-family: 'feather' !important;
+} */
+
+.dataTables_wrapper .table, .dataTables_wrapper .text-wrap table, .text-wrap .dataTables_wrapper table {
+  border-top: 1px solid rgba(0, 40, 100, 0.12);
+  border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+}
+
+.dataTables_wrapper .dataTables_length {
+  margin: 1rem 1.5rem;
+  float: left;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  width: auto;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  margin: 1rem 1.5rem;
+  text-align: right;
+  color: #495057;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  width: auto;
+  margin-left: 0.2rem;
+  display: inline-block;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  text-align: right;
+  margin: 1rem 1.5rem;
+}
+
+.dataTables_wrapper .dataTables_info {
+  clear: both;
+  float: left;
+  margin: 1rem 1.5rem;
+  color: #495057;
+  line-height: 38px;
+}

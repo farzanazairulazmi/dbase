@@ -36,5 +36,6 @@
     <script src="../dist/js/dashboard.js"></script>
     <script src="../dist/datatables/plugin.js"></script> 
     <link href="../dist/css/dashboard.css" rel="stylesheet" />
+    <link href="../dist/css/dashboard1.css" rel="stylesheet" />
 
     
